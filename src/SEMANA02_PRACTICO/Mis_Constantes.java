@@ -3,19 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package SEMANA02_TEORICO;
-
-import java.util.ArrayList;
+package SEMANA02_PRACTICO;
 
 /**
  *
  * @author NATY
  */
-public class Ejercicio04 {
-    
-    public static void main(String []args){
-    numero num1=new numero();
-    num1.getClass();
-            }
-
+public class Mis_Constantes {
+    Const string texto1 = "hola" ;
 }

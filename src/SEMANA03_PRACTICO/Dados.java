@@ -19,7 +19,7 @@ public void tirar() {
     valor=1+(int)(Math.random()*6); 
 }
 public void imprimir() {
-    System.out.println("El valor del dado es:"+valor);
+    System.out.println("EL VALOR DEL DADO ES :"+valor);
 }
 public int retornarValor() { 
     return valor; 

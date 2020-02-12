@@ -27,6 +27,7 @@ public class Triangulo {
 
     public double setBase(double base) {
         this.base = base;
+        return 0;
     }
 
     public double getAltura() {

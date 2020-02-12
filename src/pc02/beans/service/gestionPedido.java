@@ -10,7 +10,7 @@ import pc02.beans.Pedido;
 
 /**
  *
- * @author cliwfshowardfigueroavaleriano
+ * @author naty
  */
 public class gestionPedido {
     private ArrayList<Pedido> miPedido = new ArrayList<>();

@@ -7,7 +7,7 @@ package pc02.beans;
 
 /**
  *
- * @author cliwfshowardfigueroavaleriano
+ * @author naty
  */
 public class clienteJuridico extends Cliente {
     private String nombreTienda;

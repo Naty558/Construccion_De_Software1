@@ -7,7 +7,7 @@ package pc02.beans;
 
 /**
  *
- * @author cliwfshowardfigueroavaleriano
+ * @author naty
  */
 import java.util.Scanner;
 import pc02.beans.service.gestionClienteJuridico;

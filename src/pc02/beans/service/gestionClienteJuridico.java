@@ -10,7 +10,7 @@ import pc02.beans.clienteJuridico;
 
 /**
  *
- * @author cliwfshowardfigueroavaleriano
+ * @author naty
  */
 public class gestionClienteJuridico {
     

@@ -10,7 +10,7 @@ import Entidades.newpackage.miExpositor;
 
 /**
  *
- * @author cliwfshowardfigueroavaleriano
+ * @author naty
  */
 public class Prueba1 {
     

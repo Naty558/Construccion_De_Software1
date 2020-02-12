@@ -10,7 +10,7 @@ import pc02.beans.Producto;
 
 /**
  *
- * @author cliwfshowardfigueroavaleriano
+ * @author naty
  */
 public class gestionProducto {
     private ArrayList<Producto> miProducto = new ArrayList<>();

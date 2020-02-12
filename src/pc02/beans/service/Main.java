@@ -10,7 +10,7 @@ import pc02.beans.Fabrica;
 
 /**
  *
- * @author cliwfshowardfigueroavaleriano
+ * @author naty
  */
 public class Main {
     

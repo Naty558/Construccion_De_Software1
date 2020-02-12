@@ -11,7 +11,7 @@ import pc02.beans.clienteNatural;
 
 /**
  *
- * @author cliwfshowardfigueroavaleriano
+ * @author naty
  */
 public class gestionClienteNatural {
      ArrayList<clienteNatural> miClienteNatural = new ArrayList<>();

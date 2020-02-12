@@ -7,7 +7,7 @@ package evangelista;
 
 /**
  *
- * @author cliwfshowardfigueroavaleriano
+ * @author naty
  */
 public class Evangelista {
 

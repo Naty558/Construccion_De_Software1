@@ -7,7 +7,7 @@ package Entidades.newpackage;
 
 /**
  *
- * @author cliwfshowardfigueroavaleriano
+ * @author naty
  */
 public class Persona {
     String codigoPersona;

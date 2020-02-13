@@ -34,6 +34,6 @@ class perro extends canino{
 //se cre clases abstractas para comportare como super clases 
 public class eejmplo01 {
     public static void main(String[]  args){
-        canino p1=new canino();
+       // canino p1=new canino();
     }
 }

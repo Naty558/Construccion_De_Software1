@@ -39,6 +39,15 @@ class operacion{
     public void setY(int y) {
         this.y = y;
     }
+    public void suma(){
+        
+    }
+    public void resta(){
+        
+    }
+    public void produto(){
+        
+    }
     
 }
 class Operaciones<t> implements Iterable<t>{

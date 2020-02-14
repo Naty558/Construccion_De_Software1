@@ -11,7 +11,7 @@ package SEMANA03_PRACTICO;
  */
 public class Main4 {
     public static void main(String[] args) { 
-        bolsa mercado=new bolsa(5);
+    /*   bolsa mercado=new bolsa(5);
         Chocolatina c1=new Chocolatina("KOKA");
           Chocolatina c2=new Chocolatina("KOla");
      Chocolatina c3=new Chocolatina("KOki");
@@ -22,7 +22,7 @@ public class Main4 {
     mercado.add(c3);
     mercado.add(g1);
     mercado.add(g2);
-    for(Object instanceof Chocolatina)
-            System.out.println("CHOCOLATINA DE NOMBRE":);
+  /  for(Object instanceof Chocolatina)
+            System.out.println("CHOCOLATINA DE NOMBRE*/
     }
 }

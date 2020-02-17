@@ -12,68 +12,164 @@ import java.util.Iterator;
  *
  * @author NATY
  */
-class operacion{
-    private int x;
-    private int y;
+public class EjercicioPracticoOperacion<Op> implements Iterable<Op>{
 
-    public operacion(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-    public operacion(float x, float y){
-       
-    }
-
-    public int getX() {
-        return x;
-    }
-
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public void setY(int y) {
-        this.y = y;
-    }
-    public void suma(){
-        
-    }
-    public void resta(){
-        
-    }
-    public void produto(){
+    ArrayList<Op> result1 = new ArrayList<>();    
+    int topeX;
+    int topeY;
+    
+    
+    public EjercicioPracticoOperacion(int x,int y){
+        super();
+        this.topeX= x;
+        this.topeY = y;
         
     }
     
-}
-class Operaciones<t> implements Iterable<t>{
-    ArrayList<t> lista=new ArrayList<>();
-    int tope;
-    public Operaciones(int x){
-        this.tope=x;
+    
+    public void add(Op p){        
+            if(result1.size()<=topeX){
+                if(result1.size()<=topeY){
+                    result1.add(p);
+                }else{
+                    throw new RuntimeException("No cabe mas en Y");
+                }
+            }else{
+                throw new RuntimeException("No cabe mas X");
+            }                     
     }
-    void add(t p){
-        if(lista.size()<=tope)
-            lista.add(p);
-        else
-            throw new RuntimeException("Esta lleno");
-    }
+    
     @Override
-    public Iterator<t> iterator(){
-        return null;
-    } 
-   class suma{
-     private int x;
-     private int y;
-     
-       
-   }
+    public Iterator<Op> iterator() {            
+        return result1.iterator();
+    }
+           
+    
+    
+    public static void main(String[] args) {
+        
+        EjercicioPracticoOperacion<Float> op1 = new EjercicioPracticoOperacion(5,5);
+        EjercicioPracticoOperacion<Integer> op2 = new EjercicioPracticoOperacion(4,5);
+                
+        Suma s2 = new Suma(1,5);  
+        Resta r2 = new Resta(1, 2);
+        Producto p2 = new Producto(3,6);
+        
+        
+        Suma s1 = new Suma(0.78f,89f);
+        Resta r1 = new Resta(0.78f,89f);
+        Producto p1 = new Producto(8f,5f);
+        
+        //Integer
+        op2.add(s2.getSuma());
+        op2.add(r2.getResta());
+        op2.add(p2.getProducto());
+                 
+        //FLoat
+        op1.add(s1.getSumaFloat());
+        op1.add(r1.getRestaFloat());
+        op1.add(p1.getProductoFloat());
+        
+        
+        for (Integer integer : op2) {            
+            System.out.println("Operacion con Integer: "+integer.toString());            
+        }
+        System.out.println("\n");
+        for (Float f: op1) {
+            System.out.println("Operacion con FLoat: "+ f.toString());
+        }
+    }
+   
+  
+    
 }
 
-public class EjercicioPracticoOperacion {
+
+class Suma{
+    
+    int num1,num2;
+    Float n1,n2;
+    int s1;
+    Float s2;
+    
+    public Suma(int n1,int n2){
+        this.num1 = n1;
+        this.num2 = n2;
+        s1 = num1+num2;
+        
+    }
+    
+    public Suma(Float n1,Float n2){
+        this.n1 = n1;
+        this.n2 = n2;
+        s2 = n1+n2;
+    }
+    
+    public int getSuma(){
+        return s1;
+    }
+    
+    public Float getSumaFloat(){
+        return s2;
+    }
+}
+
+class Resta{
+    
+    int num1,num2;
+    Float n1,n2;
+    
+    int s1;
+    Float s2;
+    
+    public Resta(int n1,int n2){
+        this.num1 = n1;
+        this.num2 = n2;
+        s1 = n1-n2;
+    }
+    
+    public Resta(Float n1,Float n2){
+        this.n1 = n1;
+        this.n2 = n2;       
+        s2 = n1-n2;
+    }
+    
+    public int getResta(){
+        return s1;
+    }
+    
+    public Float getRestaFloat(){
+        return s2;
+    }
+    
+}
+
+
+class Producto{
+    
+    int num1,num2;
+    Float n1,n2;
+    int s1;
+    Float s2;
+    
+    public Producto(int n1,int n2){
+        this.num1 = n1;
+        this.num2 = n2;
+        s1 = n1*n2;
+    }
+    
+    public Producto(Float n1,Float n2){
+        this.n1 = n1;
+        this.n2 = n2;
+        s2 = n1*n2;
+    }
+    
+    public int getProducto(){
+        return s1;
+    }
+    
+    public Float getProductoFloat(){
+        return s2;
+    }
     
 }

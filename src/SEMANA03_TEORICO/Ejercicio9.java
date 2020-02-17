@@ -38,6 +38,11 @@ class worker{
     public String getAreaLaboral() {
         return areaLaboral;
     }
+
+    public String getAfilacion() {
+        return afilacion;
+    }
+
     
     double montoHextras(){
         return (sueldo*hextras)/240;
@@ -81,6 +86,7 @@ class person implements Iterable<worker>{
     void add(worker p1){
         list.add(p1);
     }
+     //Nombre del empleado que tenga el mayor sueldo neto. 
     String NombreEmpSueldo(){ 
         String cad="";
         double sueldotemp=0.0;
@@ -97,6 +103,7 @@ class person implements Iterable<worker>{
         }
         return cad;
     }
+    //b.Promedio de Sueldos netos del área de Marketing.
     double sueldoNetoAreas(String area){
          double acu=0;
          for(worker w:list){
@@ -106,11 +113,60 @@ class person implements Iterable<worker>{
         }
          return acu;
     }
+     //c.Numero de Empleados cuyo Monto de Seguro superen los 100 soles.
+    double MontoSeguroSuperado(){
+        double Acum=0;
+        for(worker w:list){
+            if(w.montoseguro()>100){
+                Acum=Acum+1;
+            }
+        }
+        return Acum;
+        
+    }
+    // d.Numero de empleados del área de sistemas cuyo monto de Horas extras están entre 500 y 800 soles. 
+    double NumeroSistemas(String area){
+        double acum=0;
+        for(worker w:list){
+            if(w.getAreaLaboral()==area){
+                if(w.montoHextras()>=500 && w.montoHextras()<=800)
+                {
+                    acum=acum+1;
+                }
+            }
+        }
+        return acum;
+    }
+     //Empleado del SNP con el menor monto de Descuento. 
+    String EmpleadoSNP(String afi){
+        String cad="";
+        double sueldotemp=0.0;
+        for(worker w:list){
+            if(w.getAfilacion()==afi){
+                sueldotemp=w.montosdescuento();
+            }
+        }
+        for(worker w:list){
+            if(w.montosdescuento()== sueldotemp){
+                cad+=w.getNombre()+" ";
+            }
+        }
+        return cad;
+    } 
+    // Total que gasta la empresa en pagar a todos sus empleados.
+    double TotalPago(){
+        double suma=0;
+        for(worker w:list){
+            suma=w.sueldoneto()+w.montosueldobruto()+w.montosdescuento();
+    }
+        return suma;
+    }
     @Override
     public Iterator iterator(){
         return list.iterator();
     }
-}
+    }
+
 public class Ejercicio9{
     public static void main(String[] args){
         String laboral[]={"Sistemas","Administracion","Marketing"};
@@ -132,6 +188,10 @@ public class Ejercicio9{
         }
         System.out.println("Empleado que tiene mayor sueldo neto: "+list.NombreEmpSueldo());
         System.out.println("Sueldo neto de marketing: "+dt.format(list.sueldoNetoAreas("Marketing")));
+        System.out.println("Numero de Empleados cuyo monto Seguro supera los 100 soles "+list.MontoSeguroSuperado());
+        System.out.println("Numero de empleados del área de sistemas cuyo monto de Horas extras están entre 500 y 800 soles. "+dt.format(list.NumeroSistemas("sistemas")));
+        System.out.println(" Empleado del SNP con el menor monto de Descuento  "+list.EmpleadoSNP("SNP"));
+        System.out.println(" Total que gasta la empresa en pagar a todos sus empleados."+list.TotalPago());
     }
     static int aleatorio(int min,int max){
         return (int)(Math.random()*(max-min)+min);

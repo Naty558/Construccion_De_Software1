@@ -3,14 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package SEMANA02_TEORICO;
+package SEMANA03_PRACTICO;
 
 /**
  *
  * @author NATY
  */
-
-public class Main5 {
-    
+    public class EmptyPilaException extends Exception {
+	public EmptyPilaException(String s) {
+		super(s);
+	}
+	public String toString() {
+		return "PilaExcepcion:"+super.toString();
+	}
 }
-   

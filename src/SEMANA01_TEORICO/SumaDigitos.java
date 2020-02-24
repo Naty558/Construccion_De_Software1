@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class SumaDigitos {
       public static void main(String[] args){
          Scanner entrada=new Scanner(System.in);
-   /*      int n;
+   int n;
          int suma=0;
          
          System.out.println("Ingrese un numero entero ");
@@ -24,9 +24,9 @@ public class SumaDigitos {
          n=n/10;
          }
          
-             System.out.println("La suma es "+suma);*/
+            System.out.println("La suma es "+suma);
              
-            String num;
+          /*  String num;
              int acu=0;
              System.out.println("Ingrese un numero");
              num=entrada.next();
@@ -36,7 +36,8 @@ public class SumaDigitos {
                  i--;
              }
          System.out.println(acu);
-     }
+     }*/
+}
 }
 
 

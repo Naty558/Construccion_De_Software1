@@ -165,6 +165,7 @@ class person implements Iterable<worker>{
     public Iterator iterator(){
         return list.iterator();
     }
+    
     }
 
 public class Ejercicio9{

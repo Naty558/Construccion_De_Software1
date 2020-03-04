@@ -99,16 +99,8 @@ public class AritmeticaTest {
         assertEquals(expResult, result);        
     }
   
-       @Test
-    public void testNumeroPrimo() {        
-        int n= 7;
-  
-       Aritmetica instance = new Aritmetica();
-        boolean expResult = true;
-         double result = instance.numeroPrimo(n);
-        assertEquals(expResult, result);        
-    }
-   
+      
+   @Test
 	public void  testCalcular()
 	{ 
               double precio=1200;
@@ -118,6 +110,7 @@ public class AritmeticaTest {
 		double result = instance.Calcular(precio, tipo);
                assertEquals(expResult,result);
 	}
+        @Test
         public void  testDevolver()
 	{ 
               double precio=1200;

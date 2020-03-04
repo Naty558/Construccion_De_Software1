@@ -38,15 +38,7 @@ public class Aritmetica {
         return  a % b;
        
 }
-  double  numeroPrimo(int  n){
-      int i,a=0;
-      for(i=1;i<(n+1);i++){
-          if(n%i==0){
-              a++;
-          }
-      }
-     return (a=2);
-  }
+
      double Calcular(double precio, double tipo) {
 		double iva=( precio*tipo/100) + precio;
 return (iva);

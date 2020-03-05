@@ -5,28 +5,22 @@
  */
 package SEMANA08_TEORICO.practica1;
 
-import java.awt.FlowLayout;
-import javax.swing.JFrame;
-import javax.swing.JTextArea;
+import javax.swing.*;
+import java.awt.*;
 
-/**
- *
- * @author NATY
- */
 public class AreaTexto extends JFrame {
-    public AreaTexto(){
-        super("AREA TEXTO");
+    public AreaTexto() {
+        super("AreaTexto");
         setSize(500, 180);
-       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JTextArea comentarios = new JTextArea(8, 40);
-       FlowLayout dis = new FlowLayout();
+        FlowLayout dis = new FlowLayout();
         setLayout(dis);
         add(comentarios);
         setVisible(true);
     }
+
     public static void main(String[] arguments) {
         AreaTexto app = new AreaTexto();
     }
 }
-    
-    

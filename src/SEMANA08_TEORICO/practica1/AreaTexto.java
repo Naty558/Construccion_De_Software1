@@ -13,10 +13,10 @@ public class AreaTexto extends JFrame {
         super("AreaTexto");
         setSize(500, 180);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        JTextArea comentarios = new JTextArea(8, 40);
+        //JTextArea comentarios = new JTextArea(8, 40);
         FlowLayout dis = new FlowLayout();
         setLayout(dis);
-        add(comentarios);
+       // add(comentarios);
         setVisible(true);
     }
 

@@ -1,4 +1,4 @@
-/*
+º/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -67,7 +67,7 @@ public class  Ejercicio06_colecciones  {
         }
         Collections.sort(lista, new Comparator<palabra>() {
             public int compare(palabra p1, palabra p2) {
-                return p1.getPalabra().compareTo(p2.getPalabra());
+                return p1.getPalabra().compareTo(p2.getPalabra());//comparar y ordenar elementos
             }
         });
         

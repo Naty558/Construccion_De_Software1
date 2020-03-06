@@ -1,4 +1,5 @@
-/*
+
+        /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -15,9 +16,9 @@ Dar métodos que devuelvan estos conjuntos. Crear una aplicación que la utilice
  
 public class Ejercicio04_Colecciones {
     public static void main(String[] args) {
-        WUR w = new WUR("all all we need need is love love");
+        WUR w = new WUR("hola hola como estas soy yo");
         w.contarTodas();
-        System.out.println(w.contar_Repetidas("love"));
+        System.out.println(w.contar_Repetidas("hola"));
     }
 }
 
@@ -53,7 +54,7 @@ class WUR {
 
             for (int j = 0; j < cantidad; j++) {
 
-                if (palabra.equalsIgnoreCase(palabrasB[j])) {
+                if (palabra.equalsIgnoreCase(palabrasB[j])) {//lo lee aunque sea mayuscula o minuscula
                     contador++;
                     palabras[j] = "";
                 }

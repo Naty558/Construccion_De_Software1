@@ -102,7 +102,7 @@ public class TrabajoInterfaz_Programar extends JFrame  {
         datos.add(informacion);
       }
       for (Object[]datoss : datos) {
-          modelo.addRow(datoss);
+          modelo.addRow(datoss);//insertamos filas en la tabla 
       }
       mitabla.setModel(modelo);
       mipanel.add(mitabla);
@@ -110,7 +110,7 @@ public class TrabajoInterfaz_Programar extends JFrame  {
 
       JButton volver = new JButton("Volver");
       volver.addActionListener(new ActionListener() {
-        public void actionPerformed(ActionEvent e){
+        public void actionPerformed(ActionEvent e){//metodo del accionListener
           setVisible(true);
           ventana.setVisible(false);
         }

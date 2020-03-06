@@ -18,27 +18,25 @@ números fueron impresos. */
  
  
 public class Ejercicio03 extends javax.swing.JFrame {
-
-    /**
-     * Creates new form Ejercicio03
-     */
-    ArrayList<Double> num;  
-    ArrayList<Integer> nuevo;  
-    int conta;    
-    int i;    
-    int p;   
-    int rep;   
-    int conta1; 
+ int num[];   
+ int nuevo[];    
+ int conta;   
+ int i;    
+ int p;   
+ int rep;   
+ int conta1;   
+ 
     public Ejercicio03() {
          initComponents();
-        num = new ArrayList<>();   
-        nuevo = new ArrayList<>();   
-        conta = 0;     
-        i = 0;      
-        p=0;      
-        rep=0;     
-        conta1=0;    
-    } 
+       num = new int[50];      
+       nuevo = new int[50];    
+       conta = 0;      
+       i = 0;     
+       p=0;      
+       rep=0;      
+       conta1=0;   
+    }   
+
  
     
 
@@ -166,42 +164,42 @@ public class Ejercicio03 extends javax.swing.JFrame {
 
     private void MostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MostrarActionPerformed
         // TODO add your handling code here:
-         for(i=0;i<conta;i++)     {        
-             txainicial.append(+num[i]+"\n");
-         }        
-         for(int p=i+1;p<conta;p++)         
-         {             if(num[i]==num[p])            
-         {                 rep++;
-         } //indica la cantidad de repeticiones            
-         }         
-     int existe = buscar(num[i]);       
-     {           if(existe < 0)          
-     {               
-         nuevo[conta1]=num[i];              
-     conta1++;           
-     }      
-     }       
-     for(i=0;i<conta1;i++)      {       
-         txafinal.append(nuevo[i]+"\n");    
-     }     txtfinal.setText(""+conta1);
-     
+        for(i=0;i<conta;i++)     {       
+            txainicial.append(+num[i]+"\n");
+            
+        }         
+        for(int p=i+1;p<conta;p++)        
+        {             if(num[i]==num[p])         
+        {               
+            rep++;
+        } //indica la cantidad de repeticiones            
+        }       
+             
+//llamando a la funcion busqueda que sera creada luego 
+ 
+      int existe = buscar(num[i]);       {        
+    if(existe < 0)        
+    {              
+          nuevo[conta1]=num[i];           
+          conta1++;           
+    }    
+    for(i=0;i<conta1;i++)     
+     {         
+    txafinal.append(nuevo[i]+"\n");    
+     }     
+            txtfinal.setText(""+conta1);
+    }
+
+        
     //llamando a la funcion busqueda que sera creada luego
     }//GEN-LAST:event_MostrarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-   try{
-        double a =Double.parseDouble(txtnum.getText());
-        
-        num.add(a);
-       
-    //    contador++;
-        txtnum.setText("");
-        txtnum.requestFocus();
-        txainicial.setText(String.valueOf(num.size()));
-        }catch(NumberFormatException e){
-            e.printStackTrace();
-        }
+    int numero = Integer.parseInt(txtnum.getText());   
+    num[conta]= numero;   
+    conta++; txtnum.setText("");  
+    txtnum.requestFocus();
          
      
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -240,25 +238,16 @@ public class Ejercicio03 extends javax.swing.JFrame {
             }
         });
     }
-public int buscar(int x) {
-        int existe=-1;
-        for(Double i:num){
-            if(num==x){
-                
-            }
-        }
-       
-        // si no se encuentra el elemento en el stock:
-        return -1;
-    }
-  String cadnum(ArrayList<Integer> lis){
-        String cad="";
-        for(Integer i:lis){
-            cad+=i+"\n";
-        }
-        return cad;
-    }
-  
+private int buscar(int x) { 
+    int existe=-1;  
+    for(int h=0;h<conta1;h++)   
+    {       if(x==num[h])       
+    {            existe=h;         
+    break;      
+    }    }  
+    return existe; 
+} 
+ 
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

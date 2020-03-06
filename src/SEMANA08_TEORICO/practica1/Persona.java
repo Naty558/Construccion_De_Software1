@@ -11,18 +11,18 @@ package SEMANA08_TEORICO.practica1;
  */
 public class Persona {
    public  String nombre;
-    public String direccion;
     public String edad;
+ public String direccion;
 
-    public Persona(String nombre, String direccion, String edad) {
+    public Persona(String nombre, String edad, String direccion) {
         this.nombre = nombre;
-        this.direccion = direccion;
         this.edad = edad;
+        this.direccion = direccion;
     }
     public Persona(){
         nombre="";
-        direccion="";
         edad="";
+        direccion="";
     }
 
     public String getNombre() {
@@ -33,14 +33,6 @@ public class Persona {
         this.nombre = nombre;
     }
 
-    public String getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
     public String getEdad() {
         return edad;
     }
@@ -49,9 +41,19 @@ public class Persona {
         this.edad = edad;
     }
 
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
     @Override
     public String toString() {
-        return "Persona{" + "nombre=" + nombre + ", direccion=" + direccion + ", edad=" + edad + '}';
+        return "Persona{" + "nombre=" + nombre + ", edad=" + edad + ", direccion=" + direccion + '}';
     }
+ 
+  
 
 }
